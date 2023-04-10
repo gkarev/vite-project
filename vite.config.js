@@ -11,7 +11,7 @@ const sourceFolder = 'src'
 export default defineConfig({
   root: resolve(__dirname, sourceFolder),
   publicDir: resolve(__dirname, 'public'),
-  base: '/vite-deploy-demo/',
+  // base: '/vite-deploy-demo/',
   build: {
     outDir: '../docs',
     emptyOutDir: true,
