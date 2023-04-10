@@ -1,4 +1,76 @@
-.test{
-    text-transform: uppercase;
-    color: rgb(115, 255, 0);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #6d2cf0;
+    --color-2: #212529;
+    --color-3: #adb5bd;
+    --color-4: #ffffff;
+    --color-5: #2b3035;
+    --color-6: #ffe484;
+}
+
+.test {
+    font: clamp(calc(.4vw + .4vh + 2vmin), 24px, 16px)/24px Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    header {
+        padding: 20px;
+        background-color: var(--color-1);
+        color: var(--color-4); 
+        text-align: center;
+        box-shadow:
+            0 0.5rem 1rem rgba(0, 0, 0, 0.15),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.15);
+        height: 64px;
+
+        a {
+            color: var(--color-6);
+        }
+    }
+
+    main {
+        display: grid;
+        padding: 20px;
+        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: var(--color-2);
+        height: 0;
+        flex-grow: 1;
+
+        img,
+        .bg-picture {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+            max-height: calc(50vh - 64px);
+        }
+
+        .bg-picture {
+            background: var(--color-5) url('../img/mentor.jpg') no-repeat center/cover;
+        }
+    }
+
+    footer {
+        padding: 20px;
+        background-color: var(--color-5);
+        color: var(--color-3);
+        text-align: center;
+        flex-shrink: 0;
+        height: 64px;
+    }
+
+    &__container {
+        max-width: 1200px;
+        padding-inline: 20px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+    }
 }

@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/main.scss">
     <title>Document</title>
+    <link rel="stylesheet" href="./scss/main.scss">
 </head>
+
 <body>
-    <h1 class="test">Hello</h1>
-    <img src="./img/mentor.jpg" alt="mentor cat">
-    <img src="/public/img/mentor-public.jpg" alt="mentor cat">
+    <div class="test">
+        {{> header}}
+        
+        <main>
+            <!-- Картинка с хешем -->
+            <img src="./img/mentor.jpg" alt="">
+
+            <!-- Картинка статика -->
+            <img src="./img/mentor-public.jpg" alt="">
+
+            <!-- Картинка фон -->
+            <div class="bg-picture"></div>
+        </main>
+        
+        {{>footer}}
+    </div>
 </body>
+
 </html>
